@@ -5,6 +5,7 @@
     --cinza-claro: #97a2a5;
 }
 
+/*Reset*/
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +24,10 @@ body {
     background-color: var(--fundo-branco);
     padding: 1rem;
 }
+p{
+    color: red;
+}
+/*Centraliza elementos*/
 .centraliza {
     display: flex;
     flex-direction: column;
@@ -30,6 +35,7 @@ body {
     align-items: center;
 }
 
+/*Tela de Cadastro*/
 .container {
     width: 90%;
     height: auto;
@@ -46,6 +52,7 @@ body {
     background-color: var(--bg-azul);
     gap: 1.5rem;
 }
+
 .container__login h2 {
     color: var(--branco);
     font-size: 2rem;
@@ -89,7 +96,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     width: 300px;
-    
 }
 
 .cabecalho__cadastro h2 {
@@ -109,14 +115,18 @@ body {
     color: var(--cinza-claro);
     font-size: 2rem;
 }
+
 form {
     padding: 1rem;
     text-align: center;
+    clear: both;
 }
-label{
+
+.label__cadastro{
     display: block;
     visibility: hidden;
 }
+
 input {
     width: 100%;
     height: 50px;
@@ -124,6 +134,7 @@ input {
     background-color: var(--fundo-branco);
     border: none;
 }
+
 .icon-input {
     position: absolute;
     line-height: 50px;
@@ -134,6 +145,7 @@ input {
 .btn__cadastrar {
     margin-top: 20px;
     transition: 1s;
+    box-shadow: 1px 3px 4px var(--cinza-claro);
 }
 
 .btn__cadastrar:hover {
@@ -142,6 +154,78 @@ input {
     color: var(--bg-azul);
 }
 
+
+/*Tela Login ******************/
+.login {
+    height: 650px;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: var(--branco);
+    display: flex;
+}
+
+.login__titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--bg-azul);
+}
+
+.login p{
+    color: rgb(66, 63, 63);
+    margin-bottom: 8px;
+}
+
+.esqueceu__senha {
+    float: right;
+    font-size: 0.7rem;
+    color: rgb(99, 46, 46);
+}
+
+.label__login {
+    visibility: visible;
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: rgb(66, 63, 63);
+    margin-bottom: 4px;
+}
+
+.input__login {
+    border: none;
+    border-bottom: 2px solid var(--bg-azul);
+    margin-bottom: 15px;
+}
+
+.input__login:focus {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--bg-azul);
+    caret-color: var(--bg-azul);
+}
+
+.btn__login {
+    margin-top: 20px;
+    width: 80%;
+    box-shadow: 1px 3px 4px var(--cinza-claro);
+}
+
+.btn__login:hover {
+    outline: 1px solid var(--bg-azul);
+}
+
+.logar-com .icons {
+    padding: 10px;
+    color: var(--bg-azul);
+    transition: 0.2s ease;
+}
+
+.logar-com .icons:hover {
+    transform: scale(110%);
+}
+
+.desativado {
+    display: none;
+}
 @media (min-width: 720px) {
     body {
         height: 100vh;
